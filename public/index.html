@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <style>
+        .justificarTexto
+        {
+            text-align: justify;
+        }
+
+        .precioJuego
+        {
+            color: #dc3545; 
+            font-weight: bold;
+        }
+        body {
+            background-color: #212529; 
+            color: #f8f9fa;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom border-danger"> 
+            <div class="container-fluid">
+                <a class="navbar-brand text-danger fs-3 fw-bold" href="index.html">Mundo Gamer</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Novedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Soporte</a>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-danger me-2" href="login.html">Acceder</a> 
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 bg-dark text-white border-danger" type="search" placeholder="Buscar título..." aria-label="Search"/>
+                        <button class="btn btn-danger" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="bg-dark p-5 text-center border-bottom border-secondary">
+            <h1 class="display-5 text-white">Tu Proximo Nivel Comienza Aqui</h1>
+            <p class="lead text-muted">Explora nuestro catálogo con juegos para todas las consolas.</p>
+        </div>
+    </header>
+
+<div class="container my-5">
+        <h3 class="mb-4 text-danger border-bottom border-danger pb-2">Juegos Populares</h3>
+        <div class="list-group">
+            
+            <div class="list-group-item list-group-item-action bg-dark text-white mb-3 shadow-lg">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Cyberpunk 2077</h5>
+                        <p class="mb-1 justificarTexto text-muted">RPG de mundo abierto ambientado en un futuro distópico. ¡Vive tu propia leyenda!</p>
+                        <small class="badge bg-warning text-dark">Clasificacion M (Maduro)</small>
+                    </div>
+                    <div class="text-end">
+                        <h2 class="precioJuego mb-1">$59.99</h2>
+                        <a href="comprar.html" class="btn btn-danger">Comprar Digital</a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-group-item list-group-item-action bg-dark text-white mb-3 shadow-lg">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">Minecraft Legends</h5>
+                        <p class="mb-1 justificarTexto text-muted">Juego de estrategia. Lidera tus tropas y enfrenta a los piglins en el mundo de Minecraft.</p>
+                        <small class="badge bg-success">Clasificación E (Todos)</small>
+                    </div>
+                    <div class="text-end">
+                        <h2 class="precioJuego mb-1">$49.50</h2>
+                        <a href="comprar.html" class="btn btn-danger">Comprar Digital</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-group-item list-group-item-action bg-dark text-white mb-3 shadow-lg">
+                <div class="d-flex w-100 justify-content-between align-items-center">
+                    <div>
+                        <h5 class="mb-1">F1 2024</h5>
+                        <p class="mb-1 justificarTexto text-muted">Simulador de carreras de alta velocidad con modos multijugador y campeonato global.</p>
+                        <small class="badge bg-primary">Clasificacion E10+ (Mayores de 10)</small>
+                    </div>
+                    <div class="text-end">
+                        <h2 class="precioJuego mb-1">$69.99</h2>
+                        <a href="comprar.html" class="btn btn-danger">Comprar Digital</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

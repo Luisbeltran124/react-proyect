@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 150px;
+        height: 250px;
+        border: solid 5px black;
+        border-radius: 25px;
+        margin: 25px;
+        display: inline-grid;
+    }
+
+    .arriba{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+    }
+
+    .linea{
+        border-top: 3px solid black;
+    }
+
+    .abajo{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        display: grid;
+        justify-items: center;
+        padding: 10px;
+        border-top: 5px solid black;
+    }
+
+    .pips{
+        width: 15px;
+        height: 15px;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="arriba">
+            <div class="pips"></div><div></div><div class="pips"></div>
+            <div></div><div class="pips"></div><div></div>
+            <div class="pips"></div><div></div><div class="pips"></div>
+        </div>
+        <div class="abajo">
+            <div></div><div></div><div></div>
+            <div></div><div class="pips"></div><div></div>
+            <div></div><div></div><div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="arriba">
+            <div class="pips"></div><div></div><div class="pips"></div>
+            <div></div><div></div><div></div>
+            <div class="pips"></div><div></div><div class="pips"></div>
+        </div>
+        <div class="abajo">
+            <div></div><div></div><div class="pips"></div>
+            <div></div><div></div><div></div>
+            <div class="pips"></div><div></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="arriba">
+            <div class="pips"></div><div></div><div class="pips"></div>
+            <div class="pips"></div><div></div><div class="pips"></div>
+            <div class="pips"></div><div></div><div class="pips"></div>
+        </div>
+        <div class="abajo">
+            <div></div><div></div><div class="pips"></div>
+            <div></div><div class="pips"></div><div></div>
+            <div class="pips"></div><div></div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="arriba">
+            <div></div><div></div><div class="pips"></div>
+            <div></div><div class="pips"></div><div></div>
+            <div class="pips"></div><div></div>
+        </div>
+        <div class="abajo">
+            <div class="pips"></div><div></div><div class="pips"></div>
+            <div></div><div></div><div></div>
+            <div class="pips"></div><div></div><div class="pips"></div>
+        </div>
+    </div>
+
+</body>
+</html>

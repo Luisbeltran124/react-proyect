@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    
+    img {
+      border-radius: 15px 15px 0 0;
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+    <div class="container mt-3">
+    <div id="paises" class="row g-4 justify-content-center"></div>
+    </div>
+    
+    <script>
+    async function mostrar() {
+        const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,capital,currencies,languages,population');
+        const data = await res.json();
+        
+        let html = '';
+        for (const item of data) {
+            const monedas = Object.values(item.currencies).map(m => m.name).join(', ');
+            const idiomas = Object.values(item.languages).join(', ');
+            
+            html += `
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100">
+                    <img src="${item.flags.png}" class="card-img-top" alt="Bandera de ${item.name.common}">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${item.name.common}</h5>
+                        <p><strong>Capital:</strong> ${item.capital}</p>
+                        <p><strong>Población:</strong> ${item.population}</p>
+                        <p><strong>Moneda(s):</strong> ${monedas}</p>
+                        <p><strong>Idioma(s):</strong> ${idiomas}</p>
+                        </div>
+                        </div>
+                        </div>
+                        `;
+            }
+            
+            document.getElementById('paises').innerHTML = html;
+    }
+
+    mostrar();
+    
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
